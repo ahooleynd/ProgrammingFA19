@@ -30,9 +30,9 @@ int main()
     sf::Sprite sprite4;
 
     // Load textures
-    texture1.loadFromFile("/Users/austindavidhooley/Desktop/CProgram/LeprechaunDo/1Lep-1.jpg");
-    texture2.loadFromFile("/Users/austindavidhooley/Desktop/CProgram/LeprechaunDo/1Lep-2.jpg");
-    texture3.loadFromFile("/Users/austindavidhooley/Desktop/CProgram/LeprechaunDo/1Lep-3.jpg");
+    texture1.loadFromFile("1Lep-1.jpg");
+    texture2.loadFromFile("1Lep-2.jpg");
+    texture3.loadFromFile("1Lep-3.jpg");
     //if (!texture.loadFromFile("1Lep-2.jpg")){
       //return 1;
     //}
