@@ -1,11 +1,9 @@
 //#include <chrono>
 //#include <cstdint>
 #include <iostream>
-
+#include <SFML/Audio/Music.hpp>
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
-//#include <SFML/image.hpp>
-//#include <Sprite.hpp>
 using namespace std;
 
 //uint64_t tget(){
@@ -51,8 +49,8 @@ int main()
     sprite4.setPosition(10,800);
 
     // Music code
-    //sf::Music music;
-    //music.openFromFile();
+    sf::Music music;
+    music.openFromFile("music.m4a");
 
     // Start clock
     sf::Clock clock;
@@ -69,7 +67,7 @@ int main()
             if (event.type == sf::Event::Closed)
                 window.close();
         }
-        //music.play();
+        music.play();    // Takes no arguments
 
         window.clear(sf::Color::Black);
         //window.draw(sprite2);
