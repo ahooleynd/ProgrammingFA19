@@ -77,10 +77,6 @@ int main()
             if (event.type == sf::Event::Closed)
                 window.close();
         }
-        music.play();    // Takes no arguments
-
-        // Start clock
-        sf::Clock clock;
 
         window.clear(sf::Color::Black);
         //window.draw(sprite2);
