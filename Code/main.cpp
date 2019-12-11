@@ -87,23 +87,23 @@ int main()
           //sprite2.move(-1,0);
           window.draw(sprite1);
           //cout << elapsed1.asSeconds() << endl;
-          if LeftTimes[LeftCount][2] <= (CURRENTTIME + .5) {
-              timeDif = (LeftTimes[LeftCount][2]-(CURRENTTIME));
-              score = 1000 - (timeDif/(.5)*500);
-              scoreTotal = scoreTotal + score;
-              LeftCount++;
-          }
+          //if LeftTimes[LeftCount][2] <= (CURRENTTIME + .5) {
+            //  timeDif = (LeftTimes[LeftCount][2]-(CURRENTTIME));
+              //score = 1000 - (timeDif/(.5)*500);
+              //scoreTotal = scoreTotal + score;
+              //LeftCount++;
+          //}
         }
         else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
           //sprite2.move(1,0);
           window.draw(sprite3);
 
-          if RightTimes[RightCount][2] <= (CURRENTTIME + .5) {
-              timeDif = (RightTimes[RightCount][2]-(CURRENTTIME));
-              score = 1000 - (timeDif/(.5)*500);
-              scoreTotal = scoreTotal + score;
-              RightCount++;
-          }
+          //if RightTimes[RightCount][2] <= (CURRENTTIME + .5) {
+            //  timeDif = (RightTimes[RightCount][2]-(CURRENTTIME));
+              //score = 1000 - (timeDif/(.5)*500);
+              //scoreTotal = scoreTotal + score;
+              //RightCount++;
+          //}
         }
         else window.draw(sprite2);
         //sprite1.move(1,1);
