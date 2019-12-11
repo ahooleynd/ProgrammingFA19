@@ -38,6 +38,7 @@ int main()
     sf::Sprite sprite4;
     sf::Sprite licon;
     sf::Sprite lbase;
+    sf::Sprite rbase;
 
     // Load textures
     texture1.loadFromFile("1Lep-1.jpg");
@@ -52,14 +53,18 @@ int main()
     sprite3.setTexture(texture3);
     licon.setTexture(texture4);
     lbase.setTexture(texture5);
+    rbase.setTexture(texture5);
+
 
     // Sprite scaling
     licon.scale(4,4);
     lbase.scale(4,4);
+    rbase.scale(4,4);
 
     // Sprite position
     licon.setPosition(10,800);
     lbase.setPosition(1600,800);
+    rbase.setPosition(1600,500);
 
     // Music code
     sf::Music music;
@@ -85,8 +90,10 @@ int main()
 
         window.clear(sf::Color::White);
 
+        // Draw clovers
         window.draw(licon);
         window.draw(lbase);
+        window.draw(rbase);
         licon.move(3,0);
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
           window.draw(sprite1);
