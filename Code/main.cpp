@@ -16,6 +16,9 @@ int main()
     sf::RenderWindow window(sf::VideoMode(1600, 1200), "My window"); // Create Window
     window.setFramerateLimit(60);     // Cap framerate
 
+    int LeftCount = 1;
+    int RightCount = 1;
+
     // Create texture names
     sf::Texture texture1;
     sf::Texture texture2;
