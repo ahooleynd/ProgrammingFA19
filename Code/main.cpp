@@ -60,6 +60,8 @@ int main()
     sf::Music music;
     music.openFromFile("Cmusic.ogg");
 
+    music.play();    // Takes no arguments
+
     // Start clock
     sf::Clock clock;
 
@@ -76,6 +78,9 @@ int main()
                 window.close();
         }
         music.play();    // Takes no arguments
+
+        // Start clock
+        sf::Clock clock;
 
         window.clear(sf::Color::Black);
         //window.draw(sprite2);
