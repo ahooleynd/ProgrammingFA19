@@ -13,7 +13,7 @@ using namespace std;
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(1600, 1000), "My window"); // Create Window
+    sf::RenderWindow window(sf::VideoMode(1900, 1000), "My window"); // Create Window
     window.setFramerateLimit(60);     // Cap framerate
 
     int LeftCount = 1;
@@ -37,6 +37,7 @@ int main()
     sf::Sprite sprite3;
     sf::Sprite sprite4;
     sf::Sprite licon;
+    sf::Sprite lbase;
 
     // Load textures
     texture1.loadFromFile("1Lep-1.jpg");
@@ -45,18 +46,20 @@ int main()
     texture4.loadFromFile("Licon.png");
     texture5.loadFromFile("Lbase.png");
 
-
+    // Set sprite textures
     sprite1.setTexture(texture1);
     sprite2.setTexture(texture2);
     sprite3.setTexture(texture3);
     licon.setTexture(texture4);
+    lbase.setTexture(texture5);
 
-    // Sprite Scaling
-    //sprite1.scale(2,2);
-    //sprite2.scale(2,2);
-    //sprite3.scale(2,2);
+    // Sprite scaling
     licon.scale(4,4);
+    lbase.scale(4,4);
+
+    // Sprite position
     licon.setPosition(10,800);
+    lbase.setPosition(1600,800);
 
     // Music code
     sf::Music music;
@@ -80,9 +83,10 @@ int main()
                 window.close();
         }
 
-        window.clear(sf::Color::Black);
+        window.clear(sf::Color::White);
 
         window.draw(licon);
+        window.draw(lbase);
         licon.move(3,0);
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
           window.draw(sprite1);
