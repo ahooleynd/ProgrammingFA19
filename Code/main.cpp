@@ -54,7 +54,7 @@ int main()
 
     // Music code
     sf::Music music;
-    music.openFromFile("music.wav");
+    music.openFromFile("Cmusic.ogg");
 
     // Start clock
     sf::Clock clock;
