@@ -13,7 +13,7 @@ using namespace std;
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(1600, 1200), "My window"); // Create Window
+    sf::RenderWindow window(sf::VideoMode(1600, 1000), "My window"); // Create Window
     window.setFramerateLimit(60);     // Cap framerate
 
     int LeftCount = 1;
@@ -28,38 +28,35 @@ int main()
     sf::Texture texture1;
     sf::Texture texture2;
     sf::Texture texture3;
-    sf::Sprite sprite1;
+    sf::Texture texture4;
+    sf::Texture texture5;
 
     // Create sprite names
+    sf::Sprite sprite1;
     sf::Sprite sprite2;
     sf::Sprite sprite3;
     sf::Sprite sprite4;
+    sf::Sprite licon;
 
     // Load textures
     texture1.loadFromFile("1Lep-1.jpg");
     texture2.loadFromFile("1Lep-2.jpg");
     texture3.loadFromFile("1Lep-3.jpg");
-    //if (!texture.loadFromFile("1Lep-2.jpg")){
-      //return 1;
-    //}
+    texture4.loadFromFile("Licon.png");
+    texture5.loadFromFile("Lbase.png");
+
+
     sprite1.setTexture(texture1);
     sprite2.setTexture(texture2);
     sprite3.setTexture(texture3);
-    sprite4.setTexture(texture2);
-    //sprite2.setPosition(400,400);
-    //sprite3.setPosition(800,800);
+    licon.setTexture(texture4);
 
     // Sprite Scaling
-    sprite1.scale(2,2);
-    sprite2.scale(2,2);
-    sprite3.scale(2,2);
-    sprite4.scale(0.5,0.5);
-    sprite4.setPosition(10,800);
-
-    Double RightTimes[10][2] = {{1, 3}, {2, 4}, {3, 5}, {4, 6}, {5, 7.5}, {6, 9.5}, {7, 10.5}, {8, 12}, {9, 13.5}, {10, 16}};
-    //call notes "double RightTimes[x][y];"
-    Double LeftTimes[10][2] = {{1, 2.5}, {2, 3.5}, {3, 4.5}, {4, 5.5}, {5, 7}, {6, 8.5}, {7, 10}, {8, 11.5}, {9, 13}, {10, 14}}
-    //call notes "double LeftTimes[x][y];"
+    //sprite1.scale(2,2);
+    //sprite2.scale(2,2);
+    //sprite3.scale(2,2);
+    licon.scale(4,4);
+    licon.setPosition(10,800);
 
     // Music code
     sf::Music music;
@@ -85,8 +82,8 @@ int main()
 
         window.clear(sf::Color::Black);
 
-        window.draw(sprite4);
-        sprite4.move(6,0);
+        window.draw(licon);
+        licon.move(3,0);
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
           window.draw(sprite1);
           //cout << elapsed1.asSeconds() << endl;
