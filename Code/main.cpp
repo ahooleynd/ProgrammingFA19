@@ -48,6 +48,11 @@ int main()
     sprite4.scale(0.5,0.5);
     sprite4.setPosition(10,800);
 
+    Double RightTimes[10][2] = {{1, 3}, {2, 4}, {3, 5}, {4, 6}, {5, 7.5}, {6, 9.5}, {7, 10.5}, {8, 12}, {9, 13.5}, {10, 16}};
+    //call notes "double RightTimes[x][y];"
+    Double LeftTimes[10][2] = {{1, 2.5}, {2, 3.5}, {3, 4.5}, {4, 5.5}, {5, 7}, {6, 8.5}, {7, 10}, {8, 11.5}, {9, 13}, {10, 14}}
+    //call notes "double LeftTimes[x][y];"
+
     // Music code
     sf::Music music;
     music.openFromFile("music.m4a");
@@ -70,23 +75,29 @@ int main()
         music.play();    // Takes no arguments
 
         window.clear(sf::Color::Black);
-        //window.draw(sprite2);
-        //window.draw(sprite1);
-        //window.draw(sprite3);
+
         window.draw(sprite4);
         sprite4.move(6,0);
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-          //sprite2.move(-1,0);
           window.draw(sprite1);
           //cout << elapsed1.asSeconds() << endl;
         }
         else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-          //sprite2.move(1,0);
           window.draw(sprite3);
         }
         else window.draw(sprite2);
-        //sprite1.move(1,1);
         window.display();
+
+
+//        If left or If right
+//        |
+//        If LeftTime[current LeftCount][2] </= (Current time + (a quarter of a second or so, whatever maximum amount of error we want to allow))
+
+//        TimeDiff=(LeftTime[current LeftCount][2]-(Current time));//get score
+//        Score=1000 - (TimeDiff/(maximum amount of error)*500); //generates the score as a value out of 1000 thats higher as the time difference gets closer to zero.
+//        ScoreTotal=ScoreTotal + Score; //Add score to score total
+//         increment LeftCount;
+
 
     }
 
