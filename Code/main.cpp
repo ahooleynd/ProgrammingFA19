@@ -16,6 +16,14 @@ int main()
     sf::RenderWindow window(sf::VideoMode(1600, 1200), "My window"); // Create Window
     window.setFramerateLimit(60);     // Cap framerate
 
+    int LeftCount = 1;
+    int RightCount = 1;
+    double scoreTotal = 0;
+    double timeDif;
+    double score;
+    const double LeftTimes[10][2] = {{1, 2.5}, {2, 3.5}, {3, 4.5}, {4, 5.5}, {5, 7}, {6, 8.5}, {7, 10}, {8, 11.5}, {9, 13}, {10, 14}};
+    const double RightTimes[10][2] = {{1, 3}, {2, 4}, {3, 5}, {4, 6}, {5, 7.5}, {6, 9.5}, {7, 10.5}, {8, 12}, {9, 13.5}, {10, 16}};
+
     // Create texture names
     sf::Texture texture1;
     sf::Texture texture2;
@@ -55,7 +63,9 @@ int main()
 
     // Music code
     sf::Music music;
-    music.openFromFile("music.m4a");
+    music.openFromFile("Cmusic.ogg");
+
+    music.play();    // Takes no arguments
 
     // Start clock
     sf::Clock clock;
@@ -72,7 +82,6 @@ int main()
             if (event.type == sf::Event::Closed)
                 window.close();
         }
-        music.play();    // Takes no arguments
 
         window.clear(sf::Color::Black);
 
@@ -81,9 +90,22 @@ int main()
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
           window.draw(sprite1);
           //cout << elapsed1.asSeconds() << endl;
+          //if LeftTimes[LeftCount][2] <= (CURRENTTIME + .5) {
+            //  timeDif = (LeftTimes[LeftCount][2]-(CURRENTTIME));
+              //score = 1000 - (timeDif/(.5)*500);
+              //scoreTotal = scoreTotal + score;
+              //LeftCount++;
+          //}
         }
         else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
           window.draw(sprite3);
+
+          //if RightTimes[RightCount][2] <= (CURRENTTIME + .5) {
+            //  timeDif = (RightTimes[RightCount][2]-(CURRENTTIME));
+              //score = 1000 - (timeDif/(.5)*500);
+              //scoreTotal = scoreTotal + score;
+              //RightCount++;
+          //}
         }
         else window.draw(sprite2);
         window.display();
