@@ -19,6 +19,7 @@ int main()
     int LeftCount = 1;
     int RightCount = 1;
 
+
     // Create texture names
     sf::Texture texture1;
     sf::Texture texture2;
@@ -53,7 +54,7 @@ int main()
 
     // Music code
     sf::Music music;
-    music.openFromFile("music.m4a");
+    music.openFromFile("music.wav");
 
     // Start clock
     sf::Clock clock;
@@ -82,6 +83,7 @@ int main()
           //sprite2.move(-1,0);
           window.draw(sprite1);
           //cout << elapsed1.asSeconds() << endl;
+
         }
         else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
           //sprite2.move(1,0);
