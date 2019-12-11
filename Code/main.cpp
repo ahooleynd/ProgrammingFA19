@@ -13,7 +13,7 @@ using namespace std;
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(1200, 900), "My window"); // Create Window
+    sf::RenderWindow window(sf::VideoMode(1600, 1200), "My window"); // Create Window
     window.setFramerateLimit(60);     // Cap framerate
 
     int LeftCount = 1;
