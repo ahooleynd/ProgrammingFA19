@@ -90,23 +90,39 @@ int main()
         licon.move(3,0);
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
           window.draw(sprite1);
-          //cout << elapsed1.asSeconds() << endl;
-          //if LeftTimes[LeftCount][2] <= (CURRENTTIME + .5) {
-            //  timeDif = (LeftTimes[LeftCount][2]-(CURRENTTIME));
-              //score = 1000 - (timeDif/(.5)*500);
-              //scoreTotal = scoreTotal + score;
-              //LeftCount++;
-          //}
+          sf::Time lHitTime = clock.getElapsedTime();
+          float lHitSec = lHitTime.asSeconds();
+          if (LeftCount >= 11){
+
+          }
+          else if (lHitSec > LeftTimes[LeftCount][2]) {
+             LeftCount++;
+          }
+          else if (LeftTimes[LeftCount][2] <= (lHitSec + .5)) {
+              timeDif = (LeftTimes[LeftCount][2]-(lHitSec));
+              score = 1000 - (timeDif/(.5)*500);
+              scoreTotal = scoreTotal + score;
+              LeftCount++;
+              cout << scoreTotal << endl;
+          }
         }
         else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
           window.draw(sprite3);
+          sf::Time rHitTime = clock.getElapsedTime();
+          float rHitSec = rHitTime.asSeconds();
+          if (RightCount >= 11){
 
-          //if RightTimes[RightCount][2] <= (CURRENTTIME + .5) {
-            //  timeDif = (RightTimes[RightCount][2]-(CURRENTTIME));
-              //score = 1000 - (timeDif/(.5)*500);
-              //scoreTotal = scoreTotal + score;
-              //RightCount++;
-          //}
+          }
+          else if (rHitSec > RightTimes[RightCount][2]) {
+             RightCount++;
+          }
+          else if (RightTimes[RightCount][2] <= (rHitSec + .5)) {
+              timeDif = (RightTimes[RightCount][2]-(rHitSec));
+              score = 1000 - (timeDif/(.5)*500);
+              scoreTotal = scoreTotal + score;
+              RightCount++;
+              cout << scoreTotal << endl;
+          }
         }
         else window.draw(sprite2);
         window.display();
