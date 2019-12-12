@@ -113,7 +113,7 @@ int main()
     texture7.loadFromFile("Lgreat.png");
     texture8.loadFromFile("lperfect.png");
 
-    // Set sprite textures
+
     // Set sprite textures
     sprite1.setTexture(texture1);
     sprite2.setTexture(texture2);
@@ -182,7 +182,6 @@ int main()
 
 
     // Sprite scaling
-    // Sprite scaling
     licon1.scale(4,4);
     licon2.scale(4,4);
     licon3.scale(4,4);
@@ -193,6 +192,25 @@ int main()
     licon8.scale(4,4);
     licon9.scale(4,4);
     licon10.scale(4,4);
+    licon11.scale(4,4);
+    licon12.scale(4,4);
+    licon13.scale(4,4);
+    licon14.scale(4,4);
+    licon15.scale(4,4);
+    licon16.scale(4,4);
+    licon17.scale(4,4);
+    licon18.scale(4,4);
+    licon19.scale(4,4);
+    licon20.scale(4,4);
+    licon21.scale(4,4);
+    licon22.scale(4,4);
+    licon23.scale(4,4);
+    licon24.scale(4,4);
+    licon25.scale(4,4);
+    licon26.scale(4,4);
+    licon27.scale(4,4);
+    licon28.scale(4,4);
+    licon29.scale(4,4);
     ricon1.scale(4,4);
     ricon2.scale(4,4);
     ricon3.scale(4,4);
@@ -203,6 +221,25 @@ int main()
     ricon8.scale(4,4);
     ricon9.scale(4,4);
     ricon10.scale(4,4);
+    ricon11.scale(4,4);
+    ricon12.scale(4,4);
+    ricon13.scale(4,4);
+    ricon14.scale(4,4);
+    ricon15.scale(4,4);
+    ricon16.scale(4,4);
+    ricon17.scale(4,4);
+    ricon18.scale(4,4);
+    ricon19.scale(4,4);
+    ricon20.scale(4,4);
+    ricon21.scale(4,4);
+    ricon22.scale(4,4);
+    ricon23.scale(4,4);
+    ricon24.scale(4,4);
+    ricon25.scale(4,4);
+    ricon26.scale(4,4);
+    ricon27.scale(4,4);
+    ricon28.scale(4,4);
+    ricon29.scale(4,4);
     lbase.scale(4,4);
     rbase.scale(4,4);
 
@@ -236,10 +273,6 @@ int main()
     ricon10.setPosition(lstartpos-(60*speed*11),rh);
     lbase.setPosition(1600,800);
     rbase.setPosition(1600,rh);
-<<<<<<< HEAD
-
-=======
->>>>>>> 47eb9ea937d329b35edc27582164f9d136d4ea71
 
     // Music code
     sf::Music music;
@@ -301,6 +334,25 @@ int main()
         licon8.move(speed,0);
         licon9.move(speed,0);
         licon10.move(speed,0);
+        licon11.move(speed,0);
+        licon12.move(speed,0);
+        licon13.move(speed,0);
+        licon14.move(speed,0);
+        licon15.move(speed,0);
+        licon16.move(speed,0);
+        licon17.move(speed,0);
+        licon18.move(speed,0);
+        licon19.move(speed,0);
+        licon20.move(speed,0);
+        licon21.move(speed,0);
+        licon22.move(speed,0);
+        licon23.move(speed,0);
+        licon24.move(speed,0);
+        licon25.move(speed,0);
+        licon26.move(speed,0);
+        licon27.move(speed,0);
+        licon28.move(speed,0);
+        licon29.move(speed,0);
         ricon1.move(speed,0);
         ricon2.move(speed,0);
         ricon3.move(speed,0);
@@ -311,13 +363,32 @@ int main()
         ricon8.move(speed,0);
         ricon9.move(speed,0);
         ricon10.move(speed,0);
+        ricon11.move(speed,0);
+        ricon12.move(speed,0);
+        ricon13.move(speed,0);
+        ricon14.move(speed,0);
+        ricon15.move(speed,0);
+        ricon16.move(speed,0);
+        ricon17.move(speed,0);
+        ricon18.move(speed,0);
+        ricon19.move(speed,0);
+        ricon20.move(speed,0);
+        ricon21.move(speed,0);
+        ricon22.move(speed,0);
+        ricon23.move(speed,0);
+        ricon24.move(speed,0);
+        ricon25.move(speed,0);
+        ricon26.move(speed,0);
+        ricon27.move(speed,0);
+        ricon28.move(speed,0);
+        ricon29.move(speed,0);
 
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
           window.draw(sprite1);
           sf::Time lHitTime = clock.getElapsedTime();
           float lHitSec = lHitTime.asSeconds();
-          if (LeftCount >= 11){
+          if (LeftCount >= 30){
 
           }
           else if (lHitSec > LeftTimes[LeftCount][2]) {
@@ -344,7 +415,7 @@ int main()
           window.draw(sprite3);
           sf::Time rHitTime = clock.getElapsedTime();
           float rHitSec = rHitTime.asSeconds();
-          if (RightCount >= 11){
+          if (RightCount >= 30){
 
           }
           else if (rHitSec > RightTimes[RightCount][2]) {
