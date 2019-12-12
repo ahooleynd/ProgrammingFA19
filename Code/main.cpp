@@ -16,7 +16,6 @@ int main()
     sf::RenderWindow window(sf::VideoMode(1900, 1000), "My window"); // Create Window
     window.setFramerateLimit(60);     // Cap framerate
 
-    // Scoring initialization
     int LeftCount = 1;
     int RightCount = 1;
     double scoreTotal = 0;
@@ -31,12 +30,14 @@ int main()
     sf::Texture texture3;
     sf::Texture texture4;
     sf::Texture texture5;
+    sf::Texture texture6;
+    sf::Texture texture7;
+    sf::Texture texture8;
 
     // Create sprite names
     sf::Sprite sprite1;
     sf::Sprite sprite2;
     sf::Sprite sprite3;
-    sf::Sprite sprite4;
     sf::Sprite licon1;
     sf::Sprite licon2;
     sf::Sprite licon3;
@@ -60,12 +61,17 @@ int main()
     sf::Sprite lbase;
     sf::Sprite rbase;
 
+
+
     // Load textures
     texture1.loadFromFile("1Lep-1.jpg");
     texture2.loadFromFile("1Lep-2.jpg");
     texture3.loadFromFile("1Lep-3.jpg");
     texture4.loadFromFile("Licon.png");
     texture5.loadFromFile("Lbase.png");
+    texture6.loadFromFile("Lgood.png");
+    texture7.loadFromFile("Lgreat.png");
+    texture8.loadFromFile("lperfect.png");
 
     // Set sprite textures
     sprite1.setTexture(texture1);
@@ -147,8 +153,7 @@ int main()
     ricon9.setPosition(lstartpos-(60*speed*10),rh);
     ricon10.setPosition(lstartpos-(60*speed*11),rh);
     lbase.setPosition(1600,800);
-    rbase.setPosition(1600,500);
-
+    rbase.setPosition(1600,rh);
 
     // Music code
     sf::Music music;
@@ -220,7 +225,7 @@ int main()
         ricon9.move(speed,0);
         ricon10.move(speed,0);
 
-        // Draw small angry irish man
+
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
           window.draw(sprite1);
           sf::Time lHitTime = clock.getElapsedTime();
@@ -233,6 +238,15 @@ int main()
           }
           else if (LeftTimes[LeftCount][2] <= (lHitSec + .5)) {
               timeDif = (LeftTimes[LeftCount][2]-(lHitSec));
+              if (timeDif < .1){
+                lbase.setTexture(texture8);
+              }
+              else if (timeDif < .2){
+                lbase.setTexture(texture7);
+              }
+              else if (timeDif < .3){
+                lbase.setTexture(texture6);
+              }
               score = 1000 - (timeDif/(.5)*500);
               scoreTotal = scoreTotal + score;
               LeftCount++;
@@ -251,6 +265,15 @@ int main()
           }
           else if (RightTimes[RightCount][2] <= (rHitSec + .5)) {
               timeDif = (RightTimes[RightCount][2]-(rHitSec));
+                if (timeDif < .1){
+                  rbase.setTexture(texture8);
+                }
+                else if (timeDif < .2){
+                  rbase.setTexture(texture7);
+                }
+                else if (timeDif < .3){
+                  rbase.setTexture(texture6);
+                }
               score = 1000 - (timeDif/(.5)*500);
               scoreTotal = scoreTotal + score;
               RightCount++;
