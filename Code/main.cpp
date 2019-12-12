@@ -21,8 +21,10 @@ int main()
     double scoreTotal = 0;
     double timeDif;
     double score;
-    const double LeftTimes[10][2] = {{1, 2.5}, {2, 3.5}, {3, 4.5}, {4, 5.5}, {5, 7}, {6, 8.5}, {7, 10}, {8, 11.5}, {9, 13}, {10, 14}};
-    const double RightTimes[10][2] = {{1, 3}, {2, 4}, {3, 5}, {4, 6}, {5, 7.5}, {6, 9.5}, {7, 10.5}, {8, 12}, {9, 13.5}, {10, 16}};
+    const double LeftTimes[29][2] = {{1, 5}, {2, 7.5}, {3, 8.75}, {4, 9.5}, {5, 12.25}, {6, 13.25}, {7, 14.25}, {8, 15.66}, {9, 16.5}, {10, 18}, {11, 18.75}, {12, 22.25}, {13, 23}, {14, 25.75}, {15, 27}, {16, 27.5}, {17, 29}, {18, 30.66}, {19, 31.75}, {20, 32.5}, {21, 34.1}, {22, 34.8}, {23, 36.3}, {24, 37}, {25, 40.5}, {26, 41.25}, {27, 42.4}, {28, 45.15}, {29, 48.15}};
+    const double RightTimes[29][2] = {{1, 7.25}, {2, 8.5}, {3, 9}, {4, 11.875}, {5, 13}, {6, 13.5}, {7, 15.33}, {8, 16}, {9, 17.66}, {10, 18.33}, {11, 19.75}, {12, 22.65}, {13, 23.25}, {14, 26}, {15, 27.25}, {16, 28}, {17, 30.33}, {18, 31.5}, {19, 32}, {20, 33.7}, {21, 34.5}, {22, 35.9}, {23, 36.7}, {24, 39.3}, {25, 40.875}, {26, 41.6}, {27, 44}, {28, 46.3}, {29, 48.7}};
+
+
 
     // Create texture names
     sf::Texture texture1;
@@ -48,6 +50,25 @@ int main()
     sf::Sprite licon8;
     sf::Sprite licon9;
     sf::Sprite licon10;
+    sf::Sprite licon11;
+    sf::Sprite licon12;
+    sf::Sprite licon13;
+    sf::Sprite licon14;
+    sf::Sprite licon15;
+    sf::Sprite licon16;
+    sf::Sprite licon17;
+    sf::Sprite licon18;
+    sf::Sprite licon19;
+    sf::Sprite licon20;
+    sf::Sprite licon21;
+    sf::Sprite licon22;
+    sf::Sprite licon23;
+    sf::Sprite licon24;
+    sf::Sprite licon25;
+    sf::Sprite licon26;
+    sf::Sprite licon27;
+    sf::Sprite licon28;
+    sf::Sprite licon29;
     sf::Sprite ricon1;
     sf::Sprite ricon2;
     sf::Sprite ricon3;
@@ -58,6 +79,25 @@ int main()
     sf::Sprite ricon8;
     sf::Sprite ricon9;
     sf::Sprite ricon10;
+    sf::Sprite ricon11;
+    sf::Sprite ricon12;
+    sf::Sprite ricon13;
+    sf::Sprite ricon14;
+    sf::Sprite ricon15;
+    sf::Sprite ricon16;
+    sf::Sprite ricon17;
+    sf::Sprite ricon18;
+    sf::Sprite ricon19;
+    sf::Sprite ricon20;
+    sf::Sprite ricon21;
+    sf::Sprite ricon22;
+    sf::Sprite ricon23;
+    sf::Sprite ricon24;
+    sf::Sprite ricon25;
+    sf::Sprite ricon26;
+    sf::Sprite ricon27;
+    sf::Sprite ricon28;
+    sf::Sprite ricon29;
     sf::Sprite lbase;
     sf::Sprite rbase;
 
@@ -88,6 +128,25 @@ int main()
     licon8.setTexture(texture4);
     licon9.setTexture(texture4);
     licon10.setTexture(texture4);
+    licon11.setTexture(texture4);
+    licon12.setTexture(texture4);
+    licon13.setTexture(texture4);
+    licon14.setTexture(texture4);
+    licon15.setTexture(texture4);
+    licon16.setTexture(texture4);
+    licon17.setTexture(texture4);
+    licon18.setTexture(texture4);
+    licon19.setTexture(texture4);
+    licon20.setTexture(texture4);
+    licon21.setTexture(texture4);
+    licon22.setTexture(texture4);
+    licon23.setTexture(texture4);
+    licon24.setTexture(texture4);
+    licon25.setTexture(texture4);
+    licon26.setTexture(texture4);
+    licon27.setTexture(texture4);
+    licon28.setTexture(texture4);
+    licon29.setTexture(texture4);
     ricon1.setTexture(texture4);
     ricon2.setTexture(texture4);
     ricon3.setTexture(texture4);
@@ -98,6 +157,25 @@ int main()
     ricon8.setTexture(texture4);
     ricon9.setTexture(texture4);
     ricon10.setTexture(texture4);
+    ricon11.setTexture(texture4);
+    ricon12.setTexture(texture4);
+    ricon13.setTexture(texture4);
+    ricon14.setTexture(texture4);
+    ricon15.setTexture(texture4);
+    ricon16.setTexture(texture4);
+    ricon17.setTexture(texture4);
+    ricon18.setTexture(texture4);
+    ricon19.setTexture(texture4);
+    ricon20.setTexture(texture4);
+    ricon21.setTexture(texture4);
+    ricon22.setTexture(texture4);
+    ricon23.setTexture(texture4);
+    ricon24.setTexture(texture4);
+    ricon25.setTexture(texture4);
+    ricon26.setTexture(texture4);
+    ricon27.setTexture(texture4);
+    ricon28.setTexture(texture4);
+    ricon29.setTexture(texture4);
     lbase.setTexture(texture5);
     rbase.setTexture(texture5);
 
@@ -158,7 +236,10 @@ int main()
     ricon10.setPosition(lstartpos-(60*speed*11),rh);
     lbase.setPosition(1600,800);
     rbase.setPosition(1600,rh);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 47eb9ea937d329b35edc27582164f9d136d4ea71
 
     // Music code
     sf::Music music;
