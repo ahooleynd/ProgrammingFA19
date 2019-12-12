@@ -6,10 +6,6 @@
 #include <SFML/Audio/Music.hpp>
 using namespace std;
 
-//uint64_t tget(){
-//    return std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now()).count();
-//}
-
 
 int main()
 {
@@ -429,11 +425,11 @@ int main()
           if (LeftCount >= 30){
 
           }
-          else if (lHitSec > LeftTimes[LeftCount][2]) {
+          else if (lHitSec > LeftTimes[LeftCount][1]) {
              LeftCount++;
           }
-          else if (LeftTimes[LeftCount][2] <= (lHitSec + .5)) {
-              timeDif = (LeftTimes[LeftCount][2]-(lHitSec));
+          else if (LeftTimes[LeftCount][1] <= (lHitSec + .5)) {
+              timeDif = (LeftTimes[LeftCount][1]-(lHitSec));
               if (timeDif < .1){
                 lbase.setTexture(texture8);
               }
@@ -456,11 +452,11 @@ int main()
           if (RightCount >= 30){
 
           }
-          else if (rHitSec > RightTimes[RightCount][2]) {
+          else if (rHitSec > RightTimes[RightCount][1]) {
              RightCount++;
           }
-          else if (RightTimes[RightCount][2] <= (rHitSec + .5)) {
-              timeDif = (RightTimes[RightCount][2]-(rHitSec));
+          else if (RightTimes[RightCount][1] <= (rHitSec + .5)) {
+              timeDif = (RightTimes[RightCount][1]-(rHitSec));
                 if (timeDif < .1){
                   rbase.setTexture(texture8);
                 }
