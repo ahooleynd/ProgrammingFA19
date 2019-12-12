@@ -71,7 +71,26 @@ int main()
     sprite1.setTexture(texture1);
     sprite2.setTexture(texture2);
     sprite3.setTexture(texture3);
-    licon.setTexture(texture4);
+    licon1.setTexture(texture4);
+    licon2.setTexture(texture4);
+    licon3.setTexture(texture4);
+    licon4.setTexture(texture4);
+    licon5.setTexture(texture4);
+    licon6.setTexture(texture4);
+    licon7.setTexture(texture4);
+    licon8.setTexture(texture4);
+    licon9.setTexture(texture4);
+    licon10.setTexture(texture4);
+    ricon1.setTexture(texture4);
+    ricon2.setTexture(texture4);
+    ricon3.setTexture(texture4);
+    ricon4.setTexture(texture4);
+    ricon5.setTexture(texture4);
+    ricon6.setTexture(texture4);
+    ricon7.setTexture(texture4);
+    ricon8.setTexture(texture4);
+    ricon9.setTexture(texture4);
+    ricon10.setTexture(texture4);
     lbase.setTexture(texture5);
     rbase.setTexture(texture5);
 
@@ -100,15 +119,36 @@ int main()
     lbase.scale(4,4);
     rbase.scale(4,4);
 
+    // Clover movement speed
+    int speed = 6;    // 6 pixels/frame, 360 pixels/second
+
     // Sprite position
-    lstartpos = 700;
+    int lstartpos = 100;
+    int rstartpos = 100;
+    int rh = 500;
     licon1.setPosition(lstartpos,800);
-    licon2.setPosition(lstartpos-(360*1),800);
+    licon2.setPosition(lstartpos-(60*speed*1),800);
+    licon3.setPosition(lstartpos-(60*speed*2),800);
+    licon4.setPosition(lstartpos-(60*speed*3),800);
+    licon5.setPosition(lstartpos-(60*speed*4),800);
+    licon6.setPosition(lstartpos-(60*speed*5.5),800);
+    licon7.setPosition(lstartpos-(60*speed*7),800);
+    licon8.setPosition(lstartpos-(60*speed*8.5),800);
+    licon9.setPosition(lstartpos-(60*speed*10),800);
+    licon10.setPosition(lstartpos-(60*speed*11),800);
+    ricon1.setPosition(lstartpos,rh);
+    ricon2.setPosition(lstartpos-(60*speed*1),rh);
+    ricon3.setPosition(lstartpos-(60*speed*2),rh);
+    ricon4.setPosition(lstartpos-(60*speed*3),rh);
+    ricon5.setPosition(lstartpos-(60*speed*4),rh);
+    ricon6.setPosition(lstartpos-(60*speed*5.5),rh);
+    ricon7.setPosition(lstartpos-(60*speed*7),rh);
+    ricon8.setPosition(lstartpos-(60*speed*8.5),rh);
+    ricon9.setPosition(lstartpos-(60*speed*10),rh);
+    ricon10.setPosition(lstartpos-(60*speed*11),rh);
     lbase.setPosition(1600,800);
     rbase.setPosition(1600,500);
 
-    // Clover movement speed
-    int speed = 6;    // 6 pixels/frame, 360 pixels/second
 
     // Music code
     sf::Music music;
@@ -137,10 +177,48 @@ int main()
         // Draw clovers
         window.draw(licon1);
         window.draw(licon2);
+        window.draw(licon3);
+        window.draw(licon4);
+        window.draw(licon5);
+        window.draw(licon6);
+        window.draw(licon7);
+        window.draw(licon8);
+        window.draw(licon9);
+        window.draw(licon10);
+        window.draw(ricon1);
+        window.draw(ricon2);
+        window.draw(ricon3);
+        window.draw(ricon4);
+        window.draw(ricon5);
+        window.draw(ricon6);
+        window.draw(ricon7);
+        window.draw(ricon8);
+        window.draw(ricon9);
+        window.draw(ricon10);
         window.draw(lbase);
         window.draw(rbase);
-        licon1.move(speed,0);      // 300 pixels/second
-        licon2.move(speed,0); 
+
+        // Move sprites
+        licon1.move(speed,0);
+        licon2.move(speed,0);
+        licon3.move(speed,0);
+        licon4.move(speed,0);
+        licon5.move(speed,0);
+        licon6.move(speed,0);
+        licon7.move(speed,0);
+        licon8.move(speed,0);
+        licon9.move(speed,0);
+        licon10.move(speed,0);
+        ricon1.move(speed,0);
+        ricon2.move(speed,0);
+        ricon3.move(speed,0);
+        ricon4.move(speed,0);
+        ricon5.move(speed,0);
+        ricon6.move(speed,0);
+        ricon7.move(speed,0);
+        ricon8.move(speed,0);
+        ricon9.move(speed,0);
+        ricon10.move(speed,0);
 
         // Draw small angry irish man
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
