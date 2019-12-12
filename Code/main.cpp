@@ -16,6 +16,7 @@ int main()
     sf::RenderWindow window(sf::VideoMode(1900, 1000), "My window"); // Create Window
     window.setFramerateLimit(60);     // Cap framerate
 
+    // Scoring initialization
     int LeftCount = 1;
     int RightCount = 1;
     double scoreTotal = 0;
@@ -36,7 +37,26 @@ int main()
     sf::Sprite sprite2;
     sf::Sprite sprite3;
     sf::Sprite sprite4;
-    sf::Sprite licon;
+    sf::Sprite licon1;
+    sf::Sprite licon2;
+    sf::Sprite licon3;
+    sf::Sprite licon4;
+    sf::Sprite licon5;
+    sf::Sprite licon6;
+    sf::Sprite licon7;
+    sf::Sprite licon8;
+    sf::Sprite licon9;
+    sf::Sprite licon10;
+    sf::Sprite ricon1;
+    sf::Sprite ricon2;
+    sf::Sprite ricon3;
+    sf::Sprite ricon4;
+    sf::Sprite ricon5;
+    sf::Sprite ricon6;
+    sf::Sprite ricon7;
+    sf::Sprite ricon8;
+    sf::Sprite ricon9;
+    sf::Sprite ricon10;
     sf::Sprite lbase;
     sf::Sprite rbase;
 
@@ -57,14 +77,38 @@ int main()
 
 
     // Sprite scaling
-    licon.scale(4,4);
+    licon1.scale(4,4);
+    licon2.scale(4,4);
+    licon3.scale(4,4);
+    licon4.scale(4,4);
+    licon5.scale(4,4);
+    licon6.scale(4,4);
+    licon7.scale(4,4);
+    licon8.scale(4,4);
+    licon9.scale(4,4);
+    licon10.scale(4,4);
+    ricon1.scale(4,4);
+    ricon2.scale(4,4);
+    ricon3.scale(4,4);
+    ricon4.scale(4,4);
+    ricon5.scale(4,4);
+    ricon6.scale(4,4);
+    ricon7.scale(4,4);
+    ricon8.scale(4,4);
+    ricon9.scale(4,4);
+    ricon10.scale(4,4);
     lbase.scale(4,4);
     rbase.scale(4,4);
 
     // Sprite position
-    licon.setPosition(10,800);
+    lstartpos = 700;
+    licon1.setPosition(lstartpos,800);
+    licon2.setPosition(lstartpos-(360*1),800);
     lbase.setPosition(1600,800);
     rbase.setPosition(1600,500);
+
+    // Clover movement speed
+    int speed = 6;    // 6 pixels/frame, 360 pixels/second
 
     // Music code
     sf::Music music;
@@ -91,10 +135,14 @@ int main()
         window.clear(sf::Color::White);
 
         // Draw clovers
-        window.draw(licon);
+        window.draw(licon1);
+        window.draw(licon2);
         window.draw(lbase);
         window.draw(rbase);
-        licon.move(3,0);
+        licon1.move(speed,0);      // 300 pixels/second
+        licon2.move(speed,0); 
+
+        // Draw small angry irish man
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
           window.draw(sprite1);
           sf::Time lHitTime = clock.getElapsedTime();
