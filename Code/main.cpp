@@ -120,7 +120,7 @@ int main()
     rbase.scale(4,4);
 
     // Clover movement speed
-    int speed = 6;    // 6 pixels/frame, 360 pixels/second
+    int speed = 12;    // 6 pixels/frame, 360 pixels/second
 
     // Sprite position
     int lstartpos = 100;
