@@ -74,6 +74,7 @@ int main()
     texture8.loadFromFile("lperfect.png");
 
     // Set sprite textures
+    // Set sprite textures
     sprite1.setTexture(texture1);
     sprite2.setTexture(texture2);
     sprite3.setTexture(texture3);
@@ -101,6 +102,8 @@ int main()
     rbase.setTexture(texture5);
 
 
+
+    // Sprite scaling
     // Sprite scaling
     licon1.scale(4,4);
     licon2.scale(4,4);
@@ -124,6 +127,7 @@ int main()
     ricon10.scale(4,4);
     lbase.scale(4,4);
     rbase.scale(4,4);
+
 
     // Clover movement speed
     int speed = 12;    // 6 pixels/frame, 360 pixels/second
@@ -154,6 +158,7 @@ int main()
     ricon10.setPosition(lstartpos-(60*speed*11),rh);
     lbase.setPosition(1600,800);
     rbase.setPosition(1600,rh);
+
 
     // Music code
     sf::Music music;
@@ -202,6 +207,7 @@ int main()
         window.draw(ricon10);
         window.draw(lbase);
         window.draw(rbase);
+
 
         // Move sprites
         licon1.move(speed,0);
