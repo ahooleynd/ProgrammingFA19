@@ -9,7 +9,7 @@ using namespace std;
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(1900, 1000), "My window"); // Create Window
+    sf::RenderWindow window(sf::VideoMode(1900, 950), "My window"); // Create Window
     window.setFramerateLimit(60);     // Cap framerate
 
     int LeftCount = 0;
@@ -245,7 +245,7 @@ int main()
 
     // Sprite position
     int startpos = 1600;
-    int lh = 800;
+    int lh = 700;
     int rh = 500;
     licon1.setPosition(startpos-(60*speed*LeftTimes[0][1]),lh);
     licon2.setPosition(startpos-(60*speed*LeftTimes[1][1]),lh);
