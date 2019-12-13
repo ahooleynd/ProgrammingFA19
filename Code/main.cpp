@@ -14,6 +14,9 @@ int main()
 
     int LeftCount = 0;
     int RightCount = 0;
+    int rChgStts = 0;
+    int lChgStts = 0;
+
     double scoreTotal = 0;
     double timeDif;
     double score;
@@ -455,7 +458,20 @@ int main()
         ricon28.move(speed,0);
         ricon29.move(speed,0);
 
+        sf::Time timeCheck = clock.getElapsedTime();
+        float fltTime = timeCheck.asSeconds();
 
+        if (LeftCount >= 1){
+          if (fltTime >= (LeftTimes[LeftCount-1][1] + .1)){
+                lbase.setTexture(texture5);
+          }
+        }
+
+        if (RightCount >= 1){
+          if (fltTime >= (RightTimes[RightCount-1][1] + .1)){
+                rbase.setTexture(texture5);
+          }
+        }
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
           window.draw(sprite1);
           sf::Time lHitTime = clock.getElapsedTime();
@@ -481,6 +497,7 @@ int main()
               scoreTotal = scoreTotal + score;
               LeftCount++;
               cout << scoreTotal << endl;
+
           }
         }
         else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
