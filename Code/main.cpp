@@ -12,8 +12,8 @@ int main()
     sf::RenderWindow window(sf::VideoMode(1900, 1000), "My window"); // Create Window
     window.setFramerateLimit(60);     // Cap framerate
 
-    int LeftCount = 1;
-    int RightCount = 1;
+    int LeftCount = 0;
+    int RightCount = 0;
     double scoreTotal = 0;
     double timeDif;
     double score;
@@ -343,6 +343,25 @@ int main()
         window.draw(licon8);
         window.draw(licon9);
         window.draw(licon10);
+        window.draw(licon11);
+        window.draw(licon12);
+        window.draw(licon13);
+        window.draw(licon14);
+        window.draw(licon15);
+        window.draw(licon16);
+        window.draw(licon17);
+        window.draw(licon18);
+        window.draw(licon19);
+        window.draw(licon20);
+        window.draw(licon21);
+        window.draw(licon22);
+        window.draw(licon23);
+        window.draw(licon24);
+        window.draw(licon25);
+        window.draw(licon26);
+        window.draw(licon27);
+        window.draw(licon28);
+        window.draw(licon29);
         window.draw(ricon1);
         window.draw(ricon2);
         window.draw(ricon3);
@@ -353,6 +372,25 @@ int main()
         window.draw(ricon8);
         window.draw(ricon9);
         window.draw(ricon10);
+        window.draw(ricon11);
+        window.draw(ricon12);
+        window.draw(ricon13);
+        window.draw(ricon14);
+        window.draw(ricon15);
+        window.draw(ricon16);
+        window.draw(ricon17);
+        window.draw(ricon18);
+        window.draw(ricon19);
+        window.draw(ricon20);
+        window.draw(ricon21);
+        window.draw(ricon22);
+        window.draw(ricon23);
+        window.draw(ricon24);
+        window.draw(ricon25);
+        window.draw(ricon26);
+        window.draw(ricon27);
+        window.draw(ricon28);
+        window.draw(ricon29);
         window.draw(lbase);
         window.draw(rbase);
 
@@ -422,7 +460,7 @@ int main()
           window.draw(sprite1);
           sf::Time lHitTime = clock.getElapsedTime();
           float lHitSec = lHitTime.asSeconds();
-          if (LeftCount >= 30){
+          if (LeftCount >= 29){
 
           }
           else if (lHitSec > LeftTimes[LeftCount][1]) {
@@ -449,7 +487,7 @@ int main()
           window.draw(sprite3);
           sf::Time rHitTime = clock.getElapsedTime();
           float rHitSec = rHitTime.asSeconds();
-          if (RightCount >= 30){
+          if (RightCount >= 29){
 
           }
           else if (rHitSec > RightTimes[RightCount][1]) {
